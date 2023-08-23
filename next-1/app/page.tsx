@@ -1,97 +1,73 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import * as React from 'react'
+import { Box, Container, Grid, Paper, createTheme, ThemeProvider, Button, Typography, Link } from '@mui/material/'
+import { ChevronRight } from '@mui/icons-material/'
+
+// import { createMuiTheme } from '@material-ui/core/styles';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-        
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    // const theme = createTheme({
+    //     typography: {
+    //         h1: {
+    //             fontSize: 30,
+    //         },
+    //         h2: {
+    //             fontSize: 24,
+    //         },
+    //     },
+    // });
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-
-    </main>
+    return (
+    <React.Fragment>
+        {/* <ThemeProvider theme={theme}> */}
+            <Container>
+                <Typography variant="h2" align="center">Shop By Category</Typography>
+            </Container>
+            <Container>
+                <Box align="center">
+                    <Typography variant="h2" component="h4">We protect people and the businesses they run.™</Typography>
+                    <Typography variant="body1">Lorem ipsum dolor sit amet consectetur. Risus vitae sodales pretium amet lectus vehicula morbi aliquam at. Vel velit aliquam sit posuere lacus mattis. Semper enim interdum mauris dignissim vitae consectetur. Lacinia luctus cras non in sit elit diam.</Typography>
+                    <Link href="#0">Learn More About J. J. Keller</Link>
+                </Box>
+            </Container>
+            <Container>
+                <Typography variant="h2" align="center">J. J. Keller Professional Services</Typography>
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid container alignItems="center" spacing={2}>
+                        <Grid item xs={1} sm={6}>
+                            <Box component="img" alt="image" src="https://placekitten.com/522/348" xs={{ width: 522, height: 348, }} />
+                        </Grid>
+                        <Grid item xs={1} sm={6}>
+                            <Typography variant="overline" display="block" gutterBottom>Lorem ipsum dolor sit</Typography>
+                            <Typography variant="h3" gutterBottom>Fleet & Transportation</Typography>
+                            <Typography variant="body1" gutterBottom>Lorem ipsum dolor sit amet consectetur. In eget sed amet odio gravida orci phasellus. Arcu arcu ultrices amet rutrum feugiat et lectus quam.</Typography>
+                            <Button variant="contained" endIcon={<ChevronRight />}>Learn More</Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container alignItems="center" direction="row-reverse" spacing={2}>
+                        <Grid item xs={1} sm={6}>
+                            <Box component="img" alt="image" src="https://placekitten.com/522/348" xs={{ width: 522, height: 348, }} />
+                        </Grid>
+                        <Grid item xs={1} sm={6}>
+                            <Typography variant="overline" display="block" gutterBottom>Lorem ipsum dolor sit</Typography>
+                            <Typography variant="h3" gutterBottom>Environmental Health & Safety</Typography>
+                            <Typography variant="body1" gutterBottom>Lorem ipsum dolor sit amet consectetur. In eget sed amet odio gravida orci phasellus. Arcu arcu ultrices amet rutrum feugiat et lectus quam.</Typography>
+                            <Button variant="contained" endIcon={<ChevronRight />}>Learn More</Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container alignItems="center" spacing={2}>
+                        <Grid item xs={1} sm={6}>
+                            <Box component="img" alt="image" src="https://placekitten.com/522/348" xs={{ width: 522, height: 348, }} />
+                        </Grid>
+                        <Grid item xs={1} sm={6}>
+                            <Typography variant="overline" display="block" gutterBottom>Lorem ipsum dolor sit</Typography>
+                            <Typography variant="h3" gutterBottom>Human Resources</Typography>
+                            <Typography variant="body1" gutterBottom>Lorem ipsum dolor sit amet consectetur. In eget sed amet odio gravida orci phasellus. Arcu arcu ultrices amet rutrum feugiat et lectus quam.</Typography>
+                            <Button variant="contained" endIcon={<ChevronRight />}>Learn More</Button>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Container>
+        {/* </ThemeProvider> */}
+    </React.Fragment>
   )
 }
